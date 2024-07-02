@@ -1,0 +1,202 @@
+#popup {
+  position: absolute;
+  width: 60%;
+  height: 90vh;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  border: 1px solid black;
+  z-index: 1000;
+  border-radius: 20px;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  pointer-events: auto;
+}
+
+* {
+  font-family: "Pretendard-Regular";
+  /* margin: 0; */
+  /* box-sizing: border-box; */
+}
+
+@font-face {
+  font-family: "Pretendard-Regular";
+  src: url("https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff")
+    format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+
+header {
+  height: 15%;
+  width: 100%;
+  background: #006633;
+  position: relative; /* 추가 */
+  display: flex; /* 추가 */
+  justify-content: center; /* 추가 */
+  align-items: center; /* 추가 */
+}
+
+header p {
+  margin: 4px 0;
+}
+
+.info p span {
+  font-weight: normal;
+}
+
+#store_name {
+  color: #fff;
+  font-size: 35px; /* 부제목 크기 조정 */
+  font-weight: bold;
+  margin: 0;
+}
+
+#store_hour {
+  color: #fff;
+  font-size: 28px; /* 영업시간 글꼴 크기 조정 */
+  line-height: 1.4;
+  margin-top: 4px;
+}
+
+#logo {
+  width: 80px; /* 로고 크기 조정 */
+  height: auto;
+  position: absolute;
+  right: 20px;
+}
+
+.section {
+  padding: 6px 12px 0px 12px;
+  border-bottom: 1px solid #ddd;
+  height: 33%;
+  display: flex;
+  flex-direction: column;
+}
+
+.logo {
+  width: 40px; /* 섹션 로고 크기 조정 */
+  height: auto;
+  margin-right: 6px;
+  border-radius: 5px;
+}
+
+.logo_section {
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 6px;
+  font-weight: bolder;
+  font-size: 40px;
+}
+
+.info {
+  flex: 1;
+  margin-top: 6px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-bottom: 6px;
+  font-size: 20px;
+}
+
+.info_title {
+  font-weight: bold;
+  margin: 5px 0; /* 마진 조정 */
+}
+
+footer {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  padding: 12px; /* 푸터 패딩 조정 */
+  flex-shrink: 0;
+  height: 10%;
+}
+
+footer button {
+  width: 40%;
+  height: 32px; /* 버튼 높이 조정 */
+  border-radius: 10px;
+  font-size: 14px; /* 버튼 글꼴 크기 조정 */
+  font-weight: 800;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  cursor: pointer;
+}
+
+#path {
+  color: rgb(4, 117, 244);
+}
+
+#naver {
+  color: #03c75a;
+}
+
+#google {
+  display: flex;
+  gap: 2px;
+}
+
+#google_logo {
+  border: 1px solid #ddd;
+}
+
+#google span {
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+}
+
+.google-color-blue {
+  color: #4285f4;
+}
+
+.google-color-red {
+  color: #db4437;
+}
+
+.google-color-yellow {
+  color: #f4b400;
+}
+
+.google-color-green {
+  color: #0f9d58;
+}
+
+#kakao {
+  font-size: inherit;
+}
+
+#kakao_front {
+  font-weight: lighter;
+}
+
+#kakao_back {
+  font-size: 40px;
+  font-weight: bold;
+}
+
+main {
+  flex: 1;
+}
+
+#last_section {
+  margin-bottom: 0px;
+  border-bottom: 0px;
+  padding: 0px 12px 0px 12px;
+}
+
+#titl {
+  padding: 20px;
+  display: flex; /* 추가 */
+  flex-direction: column; /* 이미 존재 */
+  justify-content: center; /* 이미 존재 */
+  align-items: center;
+  text-align: center;
+}
