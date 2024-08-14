@@ -1,0 +1,161 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>우울증 예측 모델</title>
+  <link rel="stylesheet" type="text/css" href="{% static '/css/form.css' %}?after">
+</head>
+<body>
+  <div id="wrap">
+    <header>
+      <img src="{% static 'img/head_in.png' %}" alt="">
+      <span>우울증 예측 모델</span>
+      <a href="{% url 'index' %}"><span>홈</span></a>
+      <a><span>모델</span></a>
+      <a><span>통계</span></a>
+  </header>
+    <main>
+        <div id="main_place">
+          <form id="form_input" action="" method="post">
+            {% csrf_token %}
+            <!-- <div id="age_input" class="user_input">
+              <div class="question">
+                <p>당신의 나이는 몇 살 인가요?</p>
+                <p>80세 이상일 경우 80 입력</p>
+              </div>
+              <input type="text" placeholder="만 19 ~ 80 세" id="age">
+            </div>
+            <div id="sex_input" class="user_input">
+              <div class="question">
+                <p>당신의 성별은 무엇 인가요??</p>
+              </div>
+              <div class="radio_div">
+                <input type="radio" id="sexM" name="sex" value="male">
+                <label for="sexM">
+                  <span>남성</span>
+                </label>
+              </div>
+              <div class="radio_div">
+                <input type="radio" id="sexW" name="sex" value="female">
+                <label for="sexW">
+                  <span>여성</span>
+                </label>
+              </div>
+            </div>
+            <div id="family_input" class="user_input">
+              <div class="question">
+                <p>1인 가구인가요?</p>
+              </div>
+              <div class="radio_div">
+                <input type="radio" id="familyT" name="family" value="True">
+                <label for="familyT">
+                  <span>예</span>
+                </label>
+              </div>
+              <div class="radio_div">
+                <input type="radio" id="familyF" name="family" value="False">
+                <label for="familyF">
+                  <span>아니오</span>
+                </label>
+              </div>
+            </div>
+            <div id="health_input" class="user_input">
+              <div class="question">
+                <p>현재 본인의 건강은 어떤가요?</p>
+              </div>
+              <div class="input_area">
+                <select name="health" id="health">
+                  <option value="1">매우 좋음</option>
+                  <option value="2">좋음</option>
+                  <option value="3">보통</option>
+                  <option value="4">나쁨</option>
+                  <option value="5">매우 나쁨</option>
+                </select>
+              </div>
+            </div>
+            <div id="stress_input" class="user_input">
+              <div class="question">
+                <p>평소에 스트레스를 많이 느끼시나요?</p>
+              </div>
+              <div class="input_area">
+                <select name="stress" id="stress">
+                  <option value="1">대단히 많이 느낀다</option>
+                  <option value="2">많이 느끼는 편이다</option>
+                  <option value="3">조금 느끼는 편이다</option>
+                  <option value="4">거의 느끼지 않는다</option>
+                </select>
+              </div>
+            </div>
+            <div id="weight_input" class="user_input">
+              <div class="question">
+                <p>지난 1년간 체중은 얼마나 변화 되었나요?</p>
+              </div>
+              <div class="input_area">
+                <select name="weight" id="weight">
+                  <option value="-3">10kg 이상 감소</option>
+                  <option value="-2">6kg ~ 10kg 감소</option>
+                  <option value="-1">3kg ~ 6kg 감소</option>
+                  <option value="0">변화 없음</option>
+                  <option value="1">3kg ~ 6kg 증가</option>
+                  <option value="2">6kg ~ 10kg 증가</option>
+                  <option value="3">10kg 이상 증가</option>
+                </select>
+              </div>
+            </div>
+            <div id="move_input" class="user_input">
+              <div class="question">
+                <p>현재 건강상의 문제나 신체 혹은 정신적 장애로 <br>일상생활 및 사회활동에 제한을 받고 계신가요?</p>
+              </div>
+              <div class="radio_div">
+                <input type="radio" id="moveT" name="move" value="True">
+                <label for="moveT">
+                  <span>예</span>
+                </label>
+              </div>
+              <div class="radio_div">
+                <input type="radio" id="moveF" name="move" value="False">
+                <label for="moveF">
+                  <span>아니오</span>
+                </label>
+              </div>
+            </div>
+            <div id="money_input" class="user_input">
+              <div class="question">
+                <p>월 평균 소득은 얼마인가요? <span style="color: #666;">(단위 : 만원)</span></p>
+                <p>없을 경우 0 입력</p>
+              </div>
+              <input type="text" placeholder="월 평균 소득">
+            </div>
+            <div id="work_input" class="user_input">
+              <div class="question">
+                <p>1주에 평균 근로 시간은 얼마나 되나요?</p>
+                <p>무직일 경우 0 입력</p>
+              </div>
+              <input type="text" placeholder="주당 평균 근로시간">
+            </div>
+            <div id="sit_input" class="user_input">
+              <div class="question">
+                <p>평소 하루에 앉아 있는 시간은 얼마나 되나요?</p>
+              </div>
+              <div class="input_area">
+                <input type="text" placeholder="시간">
+                <input type="text" placeholder="분">
+              </div>
+            </div> -->
+            {{ form.as_p }}
+            <div class="user_input">
+              <input type="submit" value="제출" id="submit" >
+            </div>
+          </form>
+        </div>
+      </main>
+      <footer>
+        <p>우울증 예측은 단순 예측일 뿐, 자세한 진단은 의사와의 상담이 필요합니다.</p>
+        <p id="copyright">© 2024. All Rights Reserved.</p>
+      </footer>
+    </div>
+    <script src="{% static '/js/form.js' %}?after"></script></script>
+  </body>
+  </html>
