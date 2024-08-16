@@ -1,0 +1,41 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>우울증 예측 결과</title>
+    <link rel="stylesheet" type="text/css" href="{% static '/css/result.css' %}?after">
+</head>
+<body>
+    <header>
+        <img src="{% static 'img/head_in.png' %}">
+        <span>우울증 예측 모델</span>
+        <a href="{% url 'index' %}"><span>홈</span></a>
+        <a href="{% url 'model_info' %}"><span>모델</span></a>
+        <!-- <a><span>통계</span></a> -->
+    </header>
+    <main>
+        <div id="main_place">
+            <img src="{% static 'img/head_in.png' %}">
+            <h1>우울증 예측 결과</h1>
+            <p>예측 결과: {{ prediction }}</p>
+            <p>우울증 예측 확률: {{ prediction_prob }}%</p>
+            <div>
+                <p>우을증 예측을 실시한 결과, 진단 확률 값은 {{ prediction_prob }}% 이며,</p>
+                <p>이는 "{{ prediction }}"군에 해당하는 수치입니다.</p>
+                <p id="prob_text">확률 값 50% : 우울증으로 분류</p>
+            </div>
+            <div id="btn_place">
+                <button id="re_btn"><a href="{% url 'index' %}">홈으로 돌아가기</a></button>
+                <button id="re_btn"><a href="{% url 'survey' %}">다시 예측하러 가기</a></button>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <p>우울증 예측은 단순 예측일 뿐, 자세한 진단은 의사와의 상담이 필요합니다.</p>
+        <p id="copyright">© 2024. All Rights Reserved.</p>
+    </footer>
+</body>
+<script src="{% static '/js/result.js' %}"></script>
+</html>
