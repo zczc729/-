@@ -137,3 +137,5 @@
 #### day 65 (08.25) - Streamlit
 
 #### day 66 (08.26) - Streamlit
+
+#### day 67 (08.26) - RAG
